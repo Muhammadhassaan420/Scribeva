@@ -363,7 +363,9 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        if email in users and users[email]["muhummadhassaanurrehman@gmail.com"] == password: "hassaan2005":
+if email in users and users[email]["password"] == password:
+    # Code to execute if email and password are correct
+
             login_user(User(email))
             return redirect(url_for('dashboard'))
         return "Invalid credentials"
